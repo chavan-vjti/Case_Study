@@ -15,9 +15,9 @@ cv2.line(img1,(102,109),(83,96),(0,255,0),3)    #Green line over hour hand
 cv2.circle(img1,(102,109),55,(0,0,255), 1)      #It works like BGR(Blue Green Red), Red boundary on outer dial
 cv2.circle(img1,(102,109),10,(255,0,0), 1)      #Blue concentric circle
 
-cv2.line(img2,(109,105),(95,95),(0,255,0),2)    #Green line over hour hand
-# cv2.circle(img2,(102,109),55,(0,0,255), 1)
-cv2.circle(img2,(109,105,),10,(255,0,0), 1)     #Blue concentric circle
+cv2.line(img2,(109,105),(95,95),(0,255,0),2)        #Green line over hour hand
+cv2.rectangle(img2,(63,53),(157,160),(0,0,255),1)   #Red boundary on outer dial
+cv2.circle(img2,(109,105,),10,(255,0,0), 1)         #Blue concentric circle
 
 cv2.line(img3,(116,128),(100,121),(0,255,0),2)  #Green line over hour hand
 cv2.circle(img3,(121,128),35,(0,0,255), 1)      #Red circle on outer circle
@@ -36,23 +36,21 @@ cv2.ellipse(img8,(162,124),(13,20),0,0,360,(0,0,255),1)         #Red circle on o
 cv2.ellipse(img8,(162,124),(6,10),0,0,360,(255,0,0),1)          #Blue concentric circle
 
 
-cv2.imshow('1_modified',img1)
-cv2.imshow('2_modified',img2)
-cv2.imshow('3_modified',img3)
-cv2.imshow('5_modified',img5)
-cv2.imshow('7_modified',img7)
-cv2.imshow('8_modified', img8)
+im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
-cv2.imwrite('1_modified.jpg', img1)
-cv2.imwrite('2_modified.jpg', img2)
-cv2.imwrite('3_modified.jpg', img3)
-cv2.imwrite('5_modified.jpg', img5)
-cv2.imwrite('7_modified.jpg', img7)
-cv2.imwrite('8_modified.jpg', img8)
+# cv2.imshow('1_modified',img1)
+# cv2.imshow('2_modified',img2)
+# cv2.imshow('3_modified',img3)
+# cv2.imshow('5_modified',img5)
+# cv2.imshow('7_modified',img7)
+# cv2.imshow('8_modified', img8)
+
+# cv2.imwrite('1_modified.jpg', img1)
+# cv2.imwrite('2_modified.jpg', img2)
+# cv2.imwrite('3_modified.jpg', img3)
+# cv2.imwrite('5_modified.jpg', img5)
+# cv2.imwrite('7_modified.jpg', img7)
+# cv2.imwrite('8_modified.jpg', img8)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-# pyplot.imshow(img8)
-# pyplot.show()
-
