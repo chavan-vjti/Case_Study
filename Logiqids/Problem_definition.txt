@@ -1,0 +1,6 @@
+LogIQids Backend Developer Assignment
+
+Write a program to find the value of PI till the 100th decimal place. (don’t use an inbuilt function to get the value of pi.)
+Write a program to rank the users in the given dataset according to the marks in such a way that the users with the same marks are given the same rank. (so that all the users with the same marks have the same rank). The program should save the output in a csv or excel format.
+
+Submit your answers in a zip file named <firstname_lastname>.zip (eg. yash_agarwal.zip) which contains two folders q1 and q2 with the respective solutions.
