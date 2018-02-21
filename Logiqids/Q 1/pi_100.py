@@ -1,7 +1,8 @@
 from decimal import getcontext, Decimal
+from math import sin, radians
 
-getcontext().prec = 100  # You can change this number upto nth decimal place, here n = 100
-
-pi = Decimal(22) / Decimal(7)
-
-print 'Value of \'pi\' upto 100th decimal place is ' + str(pi)  # For String concatenation pi is converted into string
+getcontext().prec = 100  # You can change this number up to nth decimal place, here decimal places = 100
+n = float(100)          # Value of n here is the small and finite segment which circle constitute of
+angle_value = sin(radians(360/(2*n)))
+pi = Decimal(n) * Decimal(angle_value)
+print pi
